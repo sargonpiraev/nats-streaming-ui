@@ -1,4 +1,4 @@
 import io from "socket.io-client";
-const socket = io(":8282/");
+const socket = io("/");
 
 export { socket };

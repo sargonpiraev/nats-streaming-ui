@@ -2,6 +2,7 @@ name: CI
 
 on: [push]
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,7 +16,7 @@ jobs:
         password: ${{ secrets.DOCKER_SECRET }}
     - name: Upload docker image
       run: |
-        IMAGE=piotrpersona/nats-streaming-ui
+        IMAGE=sargonpiraev/nats-streaming-ui
         TAG=$GITHUB_SHA-$GITHUB_RUN_ID
         docker build -t $IMAGE:$TAG .
         docker push $IMAGE:$TAG

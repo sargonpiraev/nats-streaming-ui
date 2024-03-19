@@ -1,4 +1,4 @@
-FROM node:14.11.0-stretch
+FROM node:14.14.0-stretch
 
 COPY . /opt/nats-streaming-ui
 
